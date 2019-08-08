@@ -1,8 +1,5 @@
 package cn.lime.entity;
 
-/**
- * 产品实体类
- */
 public class Product {
     private String productId;
 

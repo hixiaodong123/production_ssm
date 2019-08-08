@@ -139,7 +139,7 @@
                        selectByExampleQueryId="false"
                        domainObjectName="Manufacture"
                > </table>
-<table  tableName="task"
+                <table  tableName="task"
                        enableCountByExample="false"
                        enableUpdateByExample="false"
                        enableDeleteByExample="false"
@@ -149,6 +149,17 @@
                        enableSelectByPrimaryKey="true"
                        selectByExampleQueryId="false"
                        domainObjectName="Task"
+               > </table>
+ <table  tableName="device"
+                       enableCountByExample="false"
+                       enableUpdateByExample="false"
+                       enableDeleteByExample="false"
+                       enableSelectByExample="false"
+                       enableInsert="true"
+                       enableDeleteByPrimaryKey="true"
+                       enableSelectByPrimaryKey="true"
+                       selectByExampleQueryId="false"
+                       domainObjectName="Device"
                > </table>
 
 

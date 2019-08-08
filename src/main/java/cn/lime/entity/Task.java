@@ -1,8 +1,5 @@
 package cn.lime.entity;
 
-/**
- * 生产派工任务实体类
- */
 public class Task {
     private String taskId;
 

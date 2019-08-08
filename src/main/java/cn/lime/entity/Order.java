@@ -3,9 +3,6 @@ package cn.lime.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 订单实体类
- */
 public class Order {
     private String orderId;
 
