@@ -86,6 +86,7 @@
                    selectByExampleQueryId="false" ></table>-->
 
                <!-- 指定数据库表，要生成哪些表，就写哪些表，要和数据库中对应，不能写错！ -->
+<!--
                <table  tableName="custom"
                        enableCountByExample="false"
                        enableUpdateByExample="false"
@@ -241,8 +242,16 @@
                enableDeleteByPrimaryKey="true"
                enableSelectByPrimaryKey="true"
                selectByExampleQueryId="false" domainObjectName="MaterialConsume"/>
+-->
 
-
+        <table tableName="sys_user" enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableInsert="true"
+               enableDeleteByPrimaryKey="true"
+               enableSelectByPrimaryKey="true"
+               selectByExampleQueryId="false" domainObjectName="SystemUser"/>
 
 
         <!--      <table schema="" tableName="orders"></table>
