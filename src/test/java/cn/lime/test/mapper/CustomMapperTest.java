@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @create: 2019-08-08 11:22
  **/
 
-public class TestCustomMapper extends BaseTest
+public class CustomMapperTest extends BaseTest
 {
 
     @Autowired
