@@ -1,0 +1,2023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="production_ssm@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.14">
+    <root id="1">
+      <ServerVersion>5.1.49</ServerVersion>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="3" parent="1" name="lime">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="4" parent="1" name="mybatis">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="5" parent="1" name="mydb1">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="6" parent="1" name="mydb2">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="mysql">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="8" parent="1" name="production_ssm">
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="9" parent="1" name="ssm">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="10" parent="1" name="test">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="11" parent="1" name="webstore">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <collation id="12" parent="1" name="armscii8_bin">
+      <Charset>armscii8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="13" parent="1" name="armscii8_general_ci">
+      <Charset>armscii8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="14" parent="1" name="ascii_bin">
+      <Charset>ascii</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="15" parent="1" name="ascii_general_ci">
+      <Charset>ascii</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="16" parent="1" name="big5_bin">
+      <Charset>big5</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="17" parent="1" name="big5_chinese_ci">
+      <Charset>big5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="18" parent="1" name="binary">
+      <Charset>binary</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="19" parent="1" name="cp1250_bin">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="20" parent="1" name="cp1250_croatian_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="21" parent="1" name="cp1250_czech_cs">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="22" parent="1" name="cp1250_general_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="23" parent="1" name="cp1250_polish_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="24" parent="1" name="cp1251_bin">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="25" parent="1" name="cp1251_bulgarian_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="26" parent="1" name="cp1251_general_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="27" parent="1" name="cp1251_general_cs">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="28" parent="1" name="cp1251_ukrainian_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="29" parent="1" name="cp1256_bin">
+      <Charset>cp1256</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="30" parent="1" name="cp1256_general_ci">
+      <Charset>cp1256</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="31" parent="1" name="cp1257_bin">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="32" parent="1" name="cp1257_general_ci">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="33" parent="1" name="cp1257_lithuanian_ci">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="34" parent="1" name="cp850_bin">
+      <Charset>cp850</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="35" parent="1" name="cp850_general_ci">
+      <Charset>cp850</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="36" parent="1" name="cp852_bin">
+      <Charset>cp852</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="37" parent="1" name="cp852_general_ci">
+      <Charset>cp852</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="38" parent="1" name="cp866_bin">
+      <Charset>cp866</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="39" parent="1" name="cp866_general_ci">
+      <Charset>cp866</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="40" parent="1" name="cp932_bin">
+      <Charset>cp932</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="41" parent="1" name="cp932_japanese_ci">
+      <Charset>cp932</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="42" parent="1" name="dec8_bin">
+      <Charset>dec8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="43" parent="1" name="dec8_swedish_ci">
+      <Charset>dec8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="44" parent="1" name="eucjpms_bin">
+      <Charset>eucjpms</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="45" parent="1" name="eucjpms_japanese_ci">
+      <Charset>eucjpms</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="46" parent="1" name="euckr_bin">
+      <Charset>euckr</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="47" parent="1" name="euckr_korean_ci">
+      <Charset>euckr</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="48" parent="1" name="gb2312_bin">
+      <Charset>gb2312</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="49" parent="1" name="gb2312_chinese_ci">
+      <Charset>gb2312</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="50" parent="1" name="gbk_bin">
+      <Charset>gbk</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="51" parent="1" name="gbk_chinese_ci">
+      <Charset>gbk</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="52" parent="1" name="geostd8_bin">
+      <Charset>geostd8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="53" parent="1" name="geostd8_general_ci">
+      <Charset>geostd8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="54" parent="1" name="greek_bin">
+      <Charset>greek</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="55" parent="1" name="greek_general_ci">
+      <Charset>greek</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="56" parent="1" name="hebrew_bin">
+      <Charset>hebrew</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="57" parent="1" name="hebrew_general_ci">
+      <Charset>hebrew</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="58" parent="1" name="hp8_bin">
+      <Charset>hp8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="59" parent="1" name="hp8_english_ci">
+      <Charset>hp8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="60" parent="1" name="keybcs2_bin">
+      <Charset>keybcs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="61" parent="1" name="keybcs2_general_ci">
+      <Charset>keybcs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="62" parent="1" name="koi8r_bin">
+      <Charset>koi8r</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="63" parent="1" name="koi8r_general_ci">
+      <Charset>koi8r</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="64" parent="1" name="koi8u_bin">
+      <Charset>koi8u</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="65" parent="1" name="koi8u_general_ci">
+      <Charset>koi8u</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="66" parent="1" name="latin1_bin">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="67" parent="1" name="latin1_danish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="68" parent="1" name="latin1_general_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="69" parent="1" name="latin1_general_cs">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="70" parent="1" name="latin1_german1_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="71" parent="1" name="latin1_german2_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="72" parent="1" name="latin1_spanish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="73" parent="1" name="latin1_swedish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="74" parent="1" name="latin2_bin">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="75" parent="1" name="latin2_croatian_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="76" parent="1" name="latin2_czech_cs">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="77" parent="1" name="latin2_general_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="78" parent="1" name="latin2_hungarian_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="79" parent="1" name="latin5_bin">
+      <Charset>latin5</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="80" parent="1" name="latin5_turkish_ci">
+      <Charset>latin5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="81" parent="1" name="latin7_bin">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="82" parent="1" name="latin7_estonian_cs">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="83" parent="1" name="latin7_general_ci">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="84" parent="1" name="latin7_general_cs">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="85" parent="1" name="macce_bin">
+      <Charset>macce</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="86" parent="1" name="macce_general_ci">
+      <Charset>macce</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="87" parent="1" name="macroman_bin">
+      <Charset>macroman</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="88" parent="1" name="macroman_general_ci">
+      <Charset>macroman</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="89" parent="1" name="sjis_bin">
+      <Charset>sjis</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="90" parent="1" name="sjis_japanese_ci">
+      <Charset>sjis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="91" parent="1" name="swe7_bin">
+      <Charset>swe7</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="92" parent="1" name="swe7_swedish_ci">
+      <Charset>swe7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="93" parent="1" name="tis620_bin">
+      <Charset>tis620</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="94" parent="1" name="tis620_thai_ci">
+      <Charset>tis620</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="95" parent="1" name="ucs2_bin">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="96" parent="1" name="ucs2_czech_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="97" parent="1" name="ucs2_danish_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="98" parent="1" name="ucs2_esperanto_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="99" parent="1" name="ucs2_estonian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="100" parent="1" name="ucs2_general_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="101" parent="1" name="ucs2_hungarian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="102" parent="1" name="ucs2_icelandic_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="103" parent="1" name="ucs2_latvian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="104" parent="1" name="ucs2_lithuanian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="105" parent="1" name="ucs2_persian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="106" parent="1" name="ucs2_polish_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="107" parent="1" name="ucs2_roman_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="108" parent="1" name="ucs2_romanian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="109" parent="1" name="ucs2_slovak_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="110" parent="1" name="ucs2_slovenian_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="111" parent="1" name="ucs2_spanish2_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="112" parent="1" name="ucs2_spanish_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="113" parent="1" name="ucs2_swedish_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="114" parent="1" name="ucs2_turkish_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="115" parent="1" name="ucs2_unicode_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="116" parent="1" name="ujis_bin">
+      <Charset>ujis</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="117" parent="1" name="ujis_japanese_ci">
+      <Charset>ujis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="118" parent="1" name="utf8_bin">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="119" parent="1" name="utf8_czech_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="120" parent="1" name="utf8_danish_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="121" parent="1" name="utf8_esperanto_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="122" parent="1" name="utf8_estonian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="123" parent="1" name="utf8_general_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="124" parent="1" name="utf8_hungarian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="125" parent="1" name="utf8_icelandic_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="126" parent="1" name="utf8_latvian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="127" parent="1" name="utf8_lithuanian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="128" parent="1" name="utf8_persian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="129" parent="1" name="utf8_polish_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="130" parent="1" name="utf8_roman_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="131" parent="1" name="utf8_romanian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="132" parent="1" name="utf8_slovak_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="133" parent="1" name="utf8_slovenian_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="134" parent="1" name="utf8_spanish2_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="135" parent="1" name="utf8_spanish_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="136" parent="1" name="utf8_swedish_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="137" parent="1" name="utf8_turkish_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <collation id="138" parent="1" name="utf8_unicode_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <table id="139" parent="8" name="c_order"/>
+    <table id="140" parent="8" name="custom"/>
+    <table id="141" parent="8" name="department"/>
+    <table id="142" parent="8" name="device"/>
+    <table id="143" parent="8" name="device_check"/>
+    <table id="144" parent="8" name="device_fault"/>
+    <table id="145" parent="8" name="device_maintain"/>
+    <table id="146" parent="8" name="device_type"/>
+    <table id="147" parent="8" name="employee"/>
+    <table id="148" parent="8" name="final_count_check"/>
+    <table id="149" parent="8" name="final_measuret_check"/>
+    <table id="150" parent="8" name="manufacture"/>
+    <table id="151" parent="8" name="material"/>
+    <table id="152" parent="8" name="material_consume"/>
+    <table id="153" parent="8" name="material_receive"/>
+    <table id="154" parent="8" name="process"/>
+    <table id="155" parent="8" name="process_count_check"/>
+    <table id="156" parent="8" name="process_measure_check"/>
+    <table id="157" parent="8" name="product"/>
+    <table id="158" parent="8" name="sys_user"/>
+    <table id="159" parent="8" name="task"/>
+    <table id="160" parent="8" name="technology"/>
+    <table id="161" parent="8" name="technology_plan"/>
+    <table id="162" parent="8" name="technology_requirement"/>
+    <table id="163" parent="8" name="unqualify_apply"/>
+    <table id="164" parent="8" name="work"/>
+    <column id="165" parent="139" name="order_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="166" parent="139" name="custom_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="167" parent="139" name="product_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="168" parent="139" name="order_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="169" parent="139" name="request_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="170" parent="139" name="note">
+      <Position>6</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="171" parent="139" name="quantity">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="172" parent="139" name="unit_price">
+      <Position>8</Position>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="173" parent="139" name="unit">
+      <Position>9</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="174" parent="139" name="image">
+      <Position>10</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="175" parent="139" name="file">
+      <Position>11</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="176" parent="139" name="status">
+      <Position>12</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="177" parent="139" name="FK_Reference_5">
+      <ColNames>custom_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="178" parent="139" name="FK_Reference_28">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="179" parent="139" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>order_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="180" parent="139" name="FK_Reference_5">
+      <ColNames>custom_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>custom</RefTableName>
+      <RefColNames>custom_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="181" parent="139" name="FK_Reference_28">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>product_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="182" parent="140" name="custom_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="183" parent="140" name="custom_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="184" parent="140" name="full_name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="185" parent="140" name="address">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="186" parent="140" name="fax">
+      <Position>5</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="187" parent="140" name="email">
+      <Position>6</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="188" parent="140" name="owner_name">
+      <Position>7</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="189" parent="140" name="owner_tel">
+      <Position>8</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="190" parent="140" name="status">
+      <Position>9</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="191" parent="140" name="note">
+      <Position>10</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="192" parent="140" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>custom_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="193" parent="141" name="department_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="194" parent="141" name="department_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="195" parent="141" name="note">
+      <Position>3</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="196" parent="141" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>department_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="197" parent="142" name="device_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="198" parent="142" name="device_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="199" parent="142" name="device_type_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="200" parent="142" name="device_status_id">
+      <Position>4</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="201" parent="142" name="device_status">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="202" parent="142" name="device_purchase_date">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="203" parent="142" name="device_purchase_price">
+      <Position>7</Position>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="204" parent="142" name="device_manufacture_date">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="205" parent="142" name="device_service_life">
+      <Position>9</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="206" parent="142" name="device_keeper_id">
+      <Position>10</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="207" parent="142" name="note">
+      <Position>11</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="208" parent="142" name="FK_Reference_18">
+      <ColNames>device_type_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="209" parent="142" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>device_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="210" parent="142" name="FK_Reference_18">
+      <ColNames>device_type_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>device_type</RefTableName>
+      <RefColNames>device_type_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="211" parent="143" name="device_check_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="212" parent="143" name="device_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="213" parent="143" name="device_check_emp_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="214" parent="143" name="device_check_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="215" parent="143" name="device_check_result">
+      <Position>5</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="216" parent="143" name="device_check_fault_id">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="217" parent="143" name="FK_Reference_20">
+      <ColNames>device_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="218" parent="143" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>device_check_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="219" parent="143" name="FK_Reference_20">
+      <ColNames>device_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>device</RefTableName>
+      <RefColNames>device_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="220" parent="144" name="device_fault_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="221" parent="144" name="device_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="222" parent="144" name="device_fault_cause">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="223" parent="144" name="device_fault_detail">
+      <Position>4</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="224" parent="144" name="device_fault_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="225" parent="144" name="device_fault_maintenance">
+      <Position>6</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="226" parent="144" name="FK_Reference_21">
+      <ColNames>device_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="227" parent="144" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>device_fault_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="228" parent="144" name="FK_Reference_21">
+      <ColNames>device_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>device</RefTableName>
+      <RefColNames>device_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="229" parent="145" name="device_maintain_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="230" parent="145" name="device_fault_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="231" parent="145" name="device_maintain_emp_id">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="232" parent="145" name="device_maintain_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="233" parent="145" name="device_maintain_result">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="234" parent="145" name="device_maintain_cost">
+      <Position>6</Position>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="235" parent="145" name="note">
+      <Position>7</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="236" parent="145" name="FK_Reference_22">
+      <ColNames>device_fault_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="237" parent="145" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>device_maintain_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="238" parent="145" name="FK_Reference_22">
+      <ColNames>device_fault_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>device_fault</RefTableName>
+      <RefColNames>device_fault_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="239" parent="146" name="device_type_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="240" parent="146" name="device_type_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="146" name="device_type_model">
+      <Position>3</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="146" name="device_type_spec">
+      <Position>4</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="146" name="device_type_supplier">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="146" name="device_type_producer">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="146" name="device_type_quantity">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="146" name="device_type_warranty">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="247" parent="146" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>device_type_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="248" parent="147" name="emp_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="147" name="emp_name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="147" name="sex">
+      <Position>3</Position>
+      <DataType>char(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="147" name="id_code">
+      <Position>4</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="147" name="birthday">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="147" name="join_date">
+      <Position>6</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="147" name="status">
+      <Position>7</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="147" name="education">
+      <Position>8</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="147" name="degree">
+      <Position>9</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="257" parent="147" name="major">
+      <Position>10</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="147" name="graduate_school">
+      <Position>11</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="147" name="education_form">
+      <Position>12</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="147" name="department_id">
+      <Position>13</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="261" parent="147" name="FK_Reference_30">
+      <ColNames>department_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="262" parent="147" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>emp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="263" parent="147" name="FK_Reference_30">
+      <ColNames>department_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>department_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="264" parent="148" name="f_count_check_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="148" name="order_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="148" name="check_item">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="148" name="sample">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="148" name="check_number">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="148" name="unqualify">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="148" name="qualify">
+      <Position>7</Position>
+      <DataType>decimal(3,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="271" parent="148" name="cdate">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="148" name="measure_data">
+      <Position>9</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="148" name="emp_id">
+      <Position>10</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="148" name="result">
+      <Position>11</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="148" name="note">
+      <Position>12</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="276" parent="148" name="FK_Reference_25">
+      <ColNames>order_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="277" parent="148" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>f_count_check_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="278" parent="148" name="FK_Reference_25">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>c_order</RefTableName>
+      <RefColNames>order_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="279" parent="149" name="f_measure_check_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="280" parent="149" name="order_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="149" name="check_item">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="282" parent="149" name="cdate">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="283" parent="149" name="measure_data">
+      <Position>5</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="284" parent="149" name="emp_id">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="149" name="result">
+      <Position>7</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="149" name="note">
+      <Position>8</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="287" parent="149" name="FK_Reference_27">
+      <ColNames>order_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="288" parent="149" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>f_measure_check_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="289" parent="149" name="FK_Reference_27">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>c_order</RefTableName>
+      <RefColNames>order_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="290" parent="150" name="manufacture_sn">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="291" parent="150" name="order_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="150" name="technology_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="150" name="launch_quantity">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="150" name="begin_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="150" name="end_date">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="296" parent="150" name="FK_Reference_26">
+      <ColNames>order_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="297" parent="150" name="FK_Reference_9">
+      <ColNames>technology_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="298" parent="150" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>manufacture_sn</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="299" parent="150" name="FK_Reference_26">
+      <ColNames>order_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>c_order</RefTableName>
+      <RefColNames>order_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="300" parent="150" name="FK_Reference_9">
+      <ColNames>technology_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>technology</RefTableName>
+      <RefColNames>technology_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="301" parent="151" name="material_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="151" name="material_type">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="151" name="status">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="304" parent="151" name="remaining">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="305" parent="151" name="note">
+      <Position>5</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="306" parent="151" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>material_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="307" parent="152" name="consume_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="152" name="work_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="309" parent="152" name="material_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="152" name="consume_amount">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="311" parent="152" name="consume_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="152" name="sender">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="152" name="receiver">
+      <Position>7</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="152" name="note">
+      <Position>8</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="315" parent="152" name="FK_Reference_33">
+      <ColNames>work_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="316" parent="152" name="FK_Reference_16">
+      <ColNames>material_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="317" parent="152" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>consume_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="318" parent="152" name="FK_Reference_33">
+      <ColNames>work_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>work</RefTableName>
+      <RefColNames>work_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="319" parent="152" name="FK_Reference_16">
+      <ColNames>material_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>material</RefTableName>
+      <RefColNames>material_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="320" parent="153" name="receive_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="321" parent="153" name="material_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="322" parent="153" name="amount">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="323" parent="153" name="receive_date">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="324" parent="153" name="sender">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="325" parent="153" name="receiver">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="326" parent="153" name="note">
+      <Position>7</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="327" parent="153" name="FK_Reference_15">
+      <ColNames>material_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="328" parent="153" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>receive_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="329" parent="153" name="FK_Reference_15">
+      <ColNames>material_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>material</RefTableName>
+      <RefColNames>material_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="330" parent="154" name="process_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="331" parent="154" name="technology_plan_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="332" parent="154" name="sequence">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="333" parent="154" name="quota">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="334" parent="154" name="FK_Reference_32">
+      <ColNames>technology_plan_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="335" parent="154" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>process_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="336" parent="154" name="FK_Reference_32">
+      <ColNames>technology_plan_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>technology_plan</RefTableName>
+      <RefColNames>technology_plan_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="337" parent="155" name="p_count_check_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="338" parent="155" name="process_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="339" parent="155" name="check_item">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="340" parent="155" name="sample">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="341" parent="155" name="check_number">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="155" name="unqualify">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="155" name="qualify">
+      <Position>7</Position>
+      <DataType>decimal(3,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="344" parent="155" name="cdate">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="345" parent="155" name="measure_data">
+      <Position>9</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="346" parent="155" name="emp_id">
+      <Position>10</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="347" parent="155" name="result">
+      <Position>11</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="348" parent="155" name="note">
+      <Position>12</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="349" parent="155" name="FK_Reference_24">
+      <ColNames>process_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="350" parent="155" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>p_count_check_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="351" parent="155" name="FK_Reference_24">
+      <ColNames>process_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>process</RefTableName>
+      <RefColNames>process_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="352" parent="156" name="p_measure_check_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="156" name="process_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="354" parent="156" name="check_item">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="355" parent="156" name="cdate">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="356" parent="156" name="measure_data">
+      <Position>5</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="156" name="emp_id">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="156" name="result">
+      <Position>7</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="156" name="note">
+      <Position>8</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="360" parent="156" name="FK_Reference_23">
+      <ColNames>process_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="156" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>p_measure_check_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="362" parent="156" name="FK_Reference_23">
+      <ColNames>process_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>process</RefTableName>
+      <RefColNames>process_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="363" parent="157" name="product_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="157" name="product_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="365" parent="157" name="product_type">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="366" parent="157" name="image">
+      <Position>4</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="367" parent="157" name="note">
+      <Position>5</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="368" parent="157" name="status">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="369" parent="157" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="370" parent="158" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>varchar(36)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="158" name="username">
+      <Position>2</Position>
+      <Comment>姓名</Comment>
+      <DataType>varchar(64)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="372" parent="158" name="password">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(32)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="373" parent="158" name="locked">
+      <Position>4</Position>
+      <Comment>账号是否锁定，1：锁定，0未锁定</Comment>
+      <DataType>char(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="374" parent="158" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="375" parent="159" name="task_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="376" parent="159" name="manufacture_sn">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="377" parent="159" name="work_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="378" parent="159" name="task_quantity">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="379" parent="159" name="working_hours">
+      <Position>5</Position>
+      <DataType>decimal(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="380" parent="159" name="FK_Reference_34">
+      <ColNames>manufacture_sn</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="381" parent="159" name="FK_Reference_6">
+      <ColNames>work_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="382" parent="159" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>task_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="383" parent="159" name="FK_Reference_34">
+      <ColNames>manufacture_sn</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>manufacture</RefTableName>
+      <RefColNames>manufacture_sn</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="384" parent="159" name="FK_Reference_6">
+      <ColNames>work_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>work</RefTableName>
+      <RefColNames>work_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="385" parent="160" name="technology_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="160" name="technology_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>utf8_bin</Collation>
+    </column>
+    <column id="387" parent="160" name="price">
+      <Position>3</Position>
+      <DataType>decimal(10,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="388" parent="160" name="vital_process_period">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="389" parent="160" name="standard_capacity">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="390" parent="160" name="overtime_standard_capacity">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="391" parent="160" name="overtime_overfulfil_capacity">
+      <Position>7</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="160" name="double_capacity">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="160" name="overfulfil_capacity">
+      <Position>9</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="394" parent="160" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>technology_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="395" parent="161" name="technology_plan_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="396" parent="161" name="technology_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="397" parent="161" name="batch_amount">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="161" name="start_plan">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="161" name="end_plan">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="161" name="commit_plan">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="401" parent="161" name="technology_plan_start">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="402" parent="161" name="technology_plan_end">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="403" parent="161" name="FK_Reference_31">
+      <ColNames>technology_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="404" parent="161" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>technology_plan_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="405" parent="161" name="FK_Reference_31">
+      <ColNames>technology_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>technology</RefTableName>
+      <RefColNames>technology_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="406" parent="162" name="technology_requirement_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="407" parent="162" name="technology_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="408" parent="162" name="requirement">
+      <Position>3</Position>
+      <DataType>varchar(2000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="409" parent="162" name="add_time">
+      <Position>4</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="410" parent="162" name="revise_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="411" parent="162" name="FK_Reference_10">
+      <ColNames>technology_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="412" parent="162" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>technology_requirement_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="413" parent="162" name="FK_Reference_10">
+      <ColNames>technology_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>technology</RefTableName>
+      <RefColNames>technology_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="414" parent="163" name="unqualify_apply_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="415" parent="163" name="product_id">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="416" parent="163" name="unqualify_item">
+      <Position>3</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="417" parent="163" name="unqualify_count">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="418" parent="163" name="assembly_date">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="419" parent="163" name="emp_id">
+      <Position>6</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="420" parent="163" name="apply_date">
+      <Position>7</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="421" parent="163" name="note">
+      <Position>8</Position>
+      <DataType>varchar(5000)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="422" parent="163" name="FK_Reference_29">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="423" parent="163" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>unqualify_apply_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="424" parent="163" name="FK_Reference_29">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>product_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="425" parent="164" name="work_id">
+      <Position>1</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="426" parent="164" name="process_number">
+      <Position>2</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="427" parent="164" name="product_id">
+      <Position>3</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="428" parent="164" name="process_id">
+      <Position>4</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="429" parent="164" name="device_id">
+      <Position>5</Position>
+      <DataType>varchar(40)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="430" parent="164" name="rating">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="431" parent="164" name="FK_Reference_7">
+      <ColNames>product_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="432" parent="164" name="FK_Reference_12">
+      <ColNames>process_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="433" parent="164" name="FK_Reference_17">
+      <ColNames>device_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="434" parent="164" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>work_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="435" parent="164" name="FK_Reference_7">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>product_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="436" parent="164" name="FK_Reference_12">
+      <ColNames>process_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>process</RefTableName>
+      <RefColNames>process_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="437" parent="164" name="FK_Reference_17">
+      <ColNames>device_id</ColNames>
+      <RefSchemaName>production_ssm</RefSchemaName>
+      <RefTableName>device</RefTableName>
+      <RefColNames>device_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
