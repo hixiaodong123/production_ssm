@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class CustomMapperTest extends BaseTest
 {
-
     @Autowired
     private CustomMapper customMapper;
 
