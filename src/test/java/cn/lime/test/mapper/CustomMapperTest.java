@@ -23,6 +23,5 @@ public class CustomMapperTest extends BaseTest
     {
         Custom custom = customMapper.selectByPrimaryKey("001");
         System.out.println(custom);
-
     }
 }
