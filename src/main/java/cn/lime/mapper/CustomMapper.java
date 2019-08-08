@@ -3,7 +3,6 @@ package cn.lime.mapper;
 import cn.lime.entity.Custom;
 
 public interface CustomMapper {
-
     int deleteByPrimaryKey(String customId);
 
     int insert(Custom record);
