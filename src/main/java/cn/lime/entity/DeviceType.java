@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 设备种类实体类
+ */
 public class DeviceType {
     private String deviceTypeId;
 

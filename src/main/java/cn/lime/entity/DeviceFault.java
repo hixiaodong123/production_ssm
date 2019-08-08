@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 设备故障实体类
+ */
 public class DeviceFault {
     private String deviceFaultId;
 

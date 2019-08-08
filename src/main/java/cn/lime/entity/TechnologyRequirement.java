@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 工艺要求实体类
+ */
 public class TechnologyRequirement {
     private String technologyRequirementId;
 

@@ -1,5 +1,8 @@
 package cn.lime.entity;
 
+/**
+ * 作业管理实体类
+ */
 public class Work {
     private String workId;
 

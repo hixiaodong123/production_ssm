@@ -3,6 +3,9 @@ package cn.lime.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * 设备维修实体类
+ */
 public class DeviceMaintain {
     private String deviceMaintainId;
 

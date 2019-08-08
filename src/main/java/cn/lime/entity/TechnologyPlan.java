@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 工艺计划实体类
+ */
 public class TechnologyPlan {
     private String technologyPlanId;
 

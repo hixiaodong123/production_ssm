@@ -1,5 +1,8 @@
 package cn.lime.entity;
 
+/**
+ * 客户管理实体类
+ */
 public class Custom {
     private String customId;
 

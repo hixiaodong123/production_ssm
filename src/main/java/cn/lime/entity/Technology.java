@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.math.BigDecimal;
 
+/**
+ * 工艺实体类
+ */
 public class Technology {
     private String technologyId;
 

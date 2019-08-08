@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 生产计划管理实体类
+ */
 public class Manufacture {
     private String manufactureSn;
 

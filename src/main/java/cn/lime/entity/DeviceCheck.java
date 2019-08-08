@@ -2,6 +2,9 @@ package cn.lime.entity;
 
 import java.util.Date;
 
+/**
+ * 设备例检实体类
+ */
 public class DeviceCheck {
     private String deviceCheckId;
 

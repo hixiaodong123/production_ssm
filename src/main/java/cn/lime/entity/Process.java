@@ -1,5 +1,8 @@
 package cn.lime.entity;
 
+/**
+ * 工序管理实体类
+ */
 public class Process {
     private String processId;
 
