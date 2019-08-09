@@ -13,7 +13,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/production_ssm"
                         userId="root"
-                        password="1234">
+                        password="123156">
             <!--是否去除同名表-->
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
@@ -86,17 +86,21 @@
                    selectByExampleQueryId="false" ></table>-->
 
                <!-- 指定数据库表，要生成哪些表，就写哪些表，要和数据库中对应，不能写错！ -->
-               <table  tableName="custom"
-                       enableCountByExample="false"
-                       enableUpdateByExample="false"
-                       enableDeleteByExample="false"
-                       enableSelectByExample="false"
-                       enableInsert="true"
-                       enableDeleteByPrimaryKey="true"
-                       enableSelectByPrimaryKey="true"
-                       selectByExampleQueryId="false"
-                       domainObjectName="Custom"
-               > </table>
+               <!--<table  tableName="technology"-->
+                       <!--enableCountByExample="false"-->
+                       <!--enableUpdateByExample="false"-->
+                       <!--enableDeleteByExample="false"-->
+                       <!--enableSelectByExample="false"-->
+                       <!--enableInsert="true"-->
+                       <!--enableDeleteByPrimaryKey="true"-->
+                       <!--enableSelectByPrimaryKey="true"-->
+                       <!--selectByExampleQueryId="false"-->
+                       <!--domainObjectName="Technology"-->
+               <!--&gt; </table>-->
+        <table tableName="technology" domainObjectName="Technology"/>
+        <table tableName="technology_plan" domainObjectName="TechnologyPlan"/>
+        <table tableName="technology_requirement" domainObjectName="TechnologyRequirement"/>
+        <table tableName="process" domainObjectName="Process"/>
 
 
         <!--      <table schema="" tableName="orders"></table>
