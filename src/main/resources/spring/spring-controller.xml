@@ -8,7 +8,8 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd
 	http://www.springframework.org/schema/mvc
-	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	">
     <!-- 配置SpringMVC -->
     <!-- 1.开启SpringMVC注解模式 -->
     <!-- 简化配置：
@@ -33,5 +34,18 @@
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="cn.lime.controller" />
 
+    <!-- 放行静态资源 -->
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+    <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
+
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截的路径 -->
+            <mvc:mapping path="/home"/>
+            <bean id="myInterceptor" class="cn.lime.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
