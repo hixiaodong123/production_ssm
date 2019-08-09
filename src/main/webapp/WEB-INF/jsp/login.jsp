@@ -46,6 +46,15 @@
             float: right
         }
     </style>
+
+    <script type="application/javascript">
+        if ('${result}' != '') {
+            if ('${result}' == 0) {
+                alert('未登录,请登录！');
+            }
+        }
+
+    </script>
 </head>
 
 <body>
@@ -121,142 +130,142 @@
 <script type="text/javascript" src="js/login/placeholder.js"></script>
 <script type="text/javascript">
     $("#login").click(
-            function () {
-                var uname = $("#username");
-                var pwd = $("#password");
-                var display = $("#randiv").css('display');
-                var rcode = $("#randomcode");
+        function () {
+            var uname = $("#username");
+            var pwd = $("#password");
+            var display = $("#randiv").css('display');
+            var rcode = $("#randomcode");
 
-                if (display == 'none') {
-                    if ($.trim(uname.val()) == "") {
-                        $('#username_span').css('display', 'block');
-                        $("#passwordspan").html("");
-                        $("#userspan")
-                            .html(
-                                "<font color='red'>用户名不能为空！</font>");
-                        uname.focus();
-                    } else if ($.trim(pwd.val()) == "") {
-                        $('#username_span').css('display', 'none');
-                        $('#password_span').css('display', 'block');
-                        $("#userspan").html("");
-                        $("#passwordspan").html(
-                            "<font color='red'>密码不能为空！</font>");
-                        pwd.focus();
-                    } else {
-                        $('#password_span').css('display', 'none');
-                        $("#userspan").html("");
-                        $("#passwordspan").html("");
-                        $.ajax({
-                            type: 'POST',
-                            data:JSON.stringify({
-                                username: uname.val(),
-                                password: pwd.val(),
-                            }),
-                            url: '${baseurl}ajaxCheckLogin',// 跳转到 action
-                                contentType: "application/json;charset=UTF-8",
-                                cache: false,
-                                dataType: 'json',
-                                success: function (data) {
-                                    if (data.msg == 'account_error') {
-                                        console.log("account_erroe.");
-                                        $("#errorspan")
-                                            .html(
-                                                "<font color='red'> 用户不存在！</font>");
-                                        rcode_flag = 1;
-                                        $("#randiv").show();
-                                    } else if (data.msg == 'password_error') {
-                                        $("#errorspan")
-                                            .html(
-                                                "<font color='red'> 密码错误！</font>");
-                                        rcode_flag = 1;
-                                        $("#randiv").show();
-                                    } else if (data.msg == 'authentication_error') {
-                                        $("#errorspan")
-                                            .html(
-                                                "<font color='red'> 您没有授权！</font>");
-                                        rcode_flag = 1;
-                                        $("#randiv").show();
-                                    } else {
-                                        location.href = "${baseurl}home";
-                                    }
-                                },
-                                error: function () {
-                                    // view("异常！");
-                                    alert("第一个ajax请求异常了！");
-                                }
-                            });
-                    }
+            if (display == 'none') {
+                if ($.trim(uname.val()) == "") {
+                    $('#username_span').css('display', 'block');
+                    $("#passwordspan").html("");
+                    $("#userspan")
+                        .html(
+                            "<font color='red'>用户名不能为空！</font>");
+                    uname.focus();
+                } else if ($.trim(pwd.val()) == "") {
+                    $('#username_span').css('display', 'none');
+                    $('#password_span').css('display', 'block');
+                    $("#userspan").html("");
+                    $("#passwordspan").html(
+                        "<font color='red'>密码不能为空！</font>");
+                    pwd.focus();
                 } else {
-                    $("#errorspan").html("");
-                    if ($.trim(uname.val()) == "") {
-                        $("#passwordspan").html("");
-                        $("#userspan")
-                            .html(
-                                "<font color='red'>用户名不能为空！</font>");
-                        uname.focus();
-                    } else if ($.trim(pwd.val()) == "") {
-                        $("#userspan").html("");
-                        $("#passwordspan").html(
-                            "<font color='red'>密码不能为空！</font>");
-                        pwd.focus();
-                    } else if ($.trim(rcode.val()) == "") {
-                        $("#userspan").html("");
-                        $("#randomcode_span")
-                            .html(
-                                "<font color='red'>验证码不能为空！</font>");
-                        rcode.focus();
-                    } else {
-                        $("#userspan").html("");
-                        $("#passwordspan").html("");
-                        $("#randomcode_span").html("");
-                        $.ajax({
-                            url: '${baseurl}ajaxCheckLogin',// 跳转到 action
-                            data:JSON.stringify({
-                                username: uname.val(),
-                                password: pwd.val(),
-                                randomcode: rcode.val(),
-                            }),
-                            type: 'post',
-                            cache: false,
-                            dataType: 'json',
-                            contentType: "application/json;charset=UTF-8",
-                            success: function (data) {
-                                if (data.msg == 'account_error') {
-                                    $("#errorspan")
-                                        .html(
-                                            "<font color='red'> 用户不存在！</font>");
-                                    rcode_flag = true;
-                                    randomcode_refresh();
-                                } else if (data.msg == 'password_error') {
-                                    $("#errorspan")
-                                        .html(
-                                            "<font color='red'> 密码错误！</font>");
-                                    rcode_flag = true;
-                                    randomcode_refresh();
-                                } else if (data.msg == 'randomcode_error') {
-                                    $("#errorspan")
-                                        .html(
-                                            "<font color='red'> 验证码错误！</font>");
-                                    rcode_flag = true;
-                                    randomcode_refresh();
-                                } else if (data.msg == 'authentication_error') {
-                                    $("#errorspan")
-                                        .html(
-                                            "<font color='red'> 您没有授权！</font>");
-                                    rcode_flag = true;
-                                    randomcode_refresh();
-                                } else {
-                                    location.href = "${baseurl}home";
-                                }
-                            },
-                            error: function () {
-                                // view("异常！");
-                                alert("第二个ajax请求异常了！");
+                    $('#password_span').css('display', 'none');
+                    $("#userspan").html("");
+                    $("#passwordspan").html("");
+                    $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify({
+                            username: uname.val(),
+                            password: pwd.val(),
+                        }),
+                        url: '${baseurl}ajaxCheckLogin',// 跳转到 action
+                        contentType: "application/json;charset=UTF-8",
+                        cache: false,
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.msg == 'account_error') {
+                                console.log("account_erroe.");
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 用户不存在！</font>");
+                                rcode_flag = 1;
+                                $("#randiv").show();
+                            } else if (data.msg == 'password_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 密码错误！</font>");
+                                rcode_flag = 1;
+                                $("#randiv").show();
+                            } else if (data.msg == 'authentication_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 您没有授权！</font>");
+                                rcode_flag = 1;
+                                $("#randiv").show();
+                            } else {
+                                location.href = "${baseurl}home";
                             }
-                        });
-                    }
+                        },
+                        error: function () {
+                            // view("异常！");
+                            alert("第一个ajax请求异常了！");
+                        }
+                    });
                 }
-            });
+            } else {
+                $("#errorspan").html("");
+                if ($.trim(uname.val()) == "") {
+                    $("#passwordspan").html("");
+                    $("#userspan")
+                        .html(
+                            "<font color='red'>用户名不能为空！</font>");
+                    uname.focus();
+                } else if ($.trim(pwd.val()) == "") {
+                    $("#userspan").html("");
+                    $("#passwordspan").html(
+                        "<font color='red'>密码不能为空！</font>");
+                    pwd.focus();
+                } else if ($.trim(rcode.val()) == "") {
+                    $("#userspan").html("");
+                    $("#randomcode_span")
+                        .html(
+                            "<font color='red'>验证码不能为空！</font>");
+                    rcode.focus();
+                } else {
+                    $("#userspan").html("");
+                    $("#passwordspan").html("");
+                    $("#randomcode_span").html("");
+                    $.ajax({
+                        url: '${baseurl}ajaxCheckLogin',// 跳转到 action
+                        data: JSON.stringify({
+                            username: uname.val(),
+                            password: pwd.val(),
+                            randomcode: rcode.val(),
+                        }),
+                        type: 'post',
+                        cache: false,
+                        dataType: 'json',
+                        contentType: "application/json;charset=UTF-8",
+                        success: function (data) {
+                            if (data.msg == 'account_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 用户不存在！</font>");
+                                rcode_flag = true;
+                                randomcode_refresh();
+                            } else if (data.msg == 'password_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 密码错误！</font>");
+                                rcode_flag = true;
+                                randomcode_refresh();
+                            } else if (data.msg == 'randomcode_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 验证码错误！</font>");
+                                rcode_flag = true;
+                                randomcode_refresh();
+                            } else if (data.msg == 'authentication_error') {
+                                $("#errorspan")
+                                    .html(
+                                        "<font color='red'> 您没有授权！</font>");
+                                rcode_flag = true;
+                                randomcode_refresh();
+                            } else {
+                                location.href = "${baseurl}home";
+                            }
+                        },
+                        error: function () {
+                            // view("异常！");
+                            alert("第二个ajax请求异常了！");
+                        }
+                    });
+                }
+            }
+        });
 
     //刷新验证码
     //实现思路，重新给图片的src赋值，后边加时间，防止缓存

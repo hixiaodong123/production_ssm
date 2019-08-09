@@ -39,4 +39,13 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
 
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 拦截的路径 -->
+            <mvc:mapping path="/home"/>
+            <bean id="myInterceptor" class="cn.lime.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
