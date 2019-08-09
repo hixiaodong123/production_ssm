@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<link rel="shortcut icon" href="image/favicon.ico"/>
 <link href="js/kindeditor-4.1.10/themes/default/default.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" charset="utf-8" src="js/kindeditor-4.1.10/kindeditor-all-min.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/kindeditor-4.1.10/lang/zh_CN.js"></script>
@@ -29,7 +30,7 @@
 	
 	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='order:add' }" >
-		    <div style="float: left;">  
+		    <div style="float: left;">
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="order_add()">新增</a>  
 		    </div>  
 		</c:if>
@@ -55,8 +56,7 @@
         <input id="search_text_order" class="easyui-searchbox"  
             data-options="searcher:doSearch_order,prompt:'请输入...',menu:'#menu_order'"  
             style="width:250px;vertical-align: middle;">
-        </input>
-        <div id="menu_order" style="width:120px"> 
+        <div id="menu_order" style="width:120px">
 			<div data-options="name:'orderId'">订单编号</div> 
 			<div data-options="name:'orderCustom'">客户名称</div>
 			<div data-options="name:'orderProduct'">产品名称</div> 
@@ -292,7 +292,7 @@ function doSearch_order(value,name){ //用户输入用户名,点击搜素,触发
 	};
 	
 	function submitOrderCustomEditForm(){
-		$.get("custom/edit_judge",'',function(data){
+		$.get("custom/edit_judge",$("#orderCustomEditForm").serialize(),function(data){
     		if(data.msg != null){
     			$.messager.alert('提示', data.msg);
     		}else{

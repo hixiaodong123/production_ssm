@@ -103,4 +103,22 @@ public class Custom {
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
     }
+
+    @Override
+    public String toString()
+    {
+        final StringBuffer sb = new StringBuffer("Custom{");
+        sb.append("customId='").append(customId).append('\'');
+        sb.append(", customName='").append(customName).append('\'');
+        sb.append(", fullName='").append(fullName).append('\'');
+        sb.append(", address='").append(address).append('\'');
+        sb.append(", fax='").append(fax).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", ownerName='").append(ownerName).append('\'');
+        sb.append(", ownerTel='").append(ownerTel).append('\'');
+        sb.append(", status=").append(status);
+        sb.append(", note='").append(note).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

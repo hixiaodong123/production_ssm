@@ -1,8 +1,12 @@
 package cn.lime.mapper.planprogress;
 
 import cn.lime.entity.planprogress.Order;
+import org.apache.ibatis.annotations.Select;
 
-public interface OrderMapper {
+import java.util.List;
+
+public interface OrderMapper
+{
     int deleteByPrimaryKey(String orderId);
 
     int insert(Order record);
@@ -14,4 +18,6 @@ public interface OrderMapper {
     int updateByPrimaryKeySelective(Order record);
 
     int updateByPrimaryKey(Order record);
+
+    List<Order> findAll();
 }
