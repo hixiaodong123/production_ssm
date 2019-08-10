@@ -9,11 +9,12 @@
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true" />
         </commentGenerator>
+
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/production_ssm"
                         userId="root"
-                        password="1234">
+                        password="123456">
             <!--是否去除同名表-->
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
@@ -86,17 +87,20 @@
                    selectByExampleQueryId="false" ></table>-->
 
                <!-- 指定数据库表，要生成哪些表，就写哪些表，要和数据库中对应，不能写错！ -->
-               <table  tableName="custom"
-                       enableCountByExample="false"
-                       enableUpdateByExample="false"
-                       enableDeleteByExample="false"
-                       enableSelectByExample="false"
-                       enableInsert="true"
-                       enableDeleteByPrimaryKey="true"
-                       enableSelectByPrimaryKey="true"
-                       selectByExampleQueryId="false"
-                       domainObjectName="Custom"
-               > </table>
+            <!--<table  tableName="custom"-->
+                   <!--enableCountByExample="false"-->
+                   <!--enableUpdateByExample="false"-->
+                   <!--enableDeleteByExample="false"-->
+                   <!--enableSelectByExample="false"-->
+                   <!--enableInsert="true"-->
+                   <!--enableDeleteByPrimaryKey="true"-->
+                   <!--enableSelectByPrimaryKey="true"-->
+                   <!--selectByExampleQueryId="false"-->
+                   <!--domainObjectName="Custom"-->
+            <!--&gt; </table>-->
+            <table tableName="material" domainObjectName="Material"/>
+            <table tableName="material_consume" domainObjectName="MaterialConsume"/>
+            <table tableName="material_receive" domainObjectName="MaterialReceive"/>
 
 
         <!--      <table schema="" tableName="orders"></table>
