@@ -1,5 +1,8 @@
 package cn.lime.entity.technology;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class TechnologyRequirement {
@@ -9,9 +12,23 @@ public class TechnologyRequirement {
 
     private String requirement;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd HH:mm:ss")
     private Date addTime;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd HH:mm:ss")
     private Date reviseTime;
+
+    private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
 
     public String getTechnologyRequirementId() {
         return technologyRequirementId;

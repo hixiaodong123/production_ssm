@@ -1,0 +1,7 @@
+/.idea/
+/webapp/
+/spring/
+generatorConfig.xml
+jdbc.properties
+log4j.properties
+mybatisConfig.xml

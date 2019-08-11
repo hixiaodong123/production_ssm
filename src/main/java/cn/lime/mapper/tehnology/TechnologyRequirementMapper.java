@@ -4,6 +4,7 @@ import cn.lime.entity.technology.TechnologyRequirement;
 import cn.lime.entity.technology.TechnologyRequirementExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.PathVariable;
 
 public interface TechnologyRequirementMapper {
     long countByExample(TechnologyRequirementExample example);
@@ -17,6 +18,12 @@ public interface TechnologyRequirementMapper {
     int insertSelective(TechnologyRequirement record);
 
     List<TechnologyRequirement> selectByExample(TechnologyRequirementExample example);
+
+    List<TechnologyRequirement> selectAllTechnologyRequirementLeft();
+
+    List<TechnologyRequirement> selectTechnologyRequirementByTechnologyRequirementIdLike(@Param("searchValue") String searchValue);
+
+    List<TechnologyRequirement> selectTechnologyRequirementByTechnologyNameLike(@Param("searchValue") String searchValues);
 
     TechnologyRequirement selectByPrimaryKey(String technologyRequirementId);
 

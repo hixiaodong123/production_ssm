@@ -18,6 +18,8 @@ public interface TechnologyPlanMapper {
 
     List<TechnologyPlan> selectByExample(TechnologyPlanExample example);
 
+    List<TechnologyPlan> selectAllTechnologyPlanLeft();
+
     TechnologyPlan selectByPrimaryKey(String technologyPlanId);
 
     int updateByExampleSelective(@Param("record") TechnologyPlan record, @Param("example") TechnologyPlanExample example);
@@ -27,4 +29,8 @@ public interface TechnologyPlanMapper {
     int updateByPrimaryKeySelective(TechnologyPlan record);
 
     int updateByPrimaryKey(TechnologyPlan record);
+
+    List<TechnologyPlan> selectTechnologyPlanByTechnologyPlanIdLike(@Param("searchValue") String searchValue);
+
+    List<TechnologyPlan> selectTechnologyPlanByTechnologyNameLike(@Param("searchValue") String searchValue);
 }
