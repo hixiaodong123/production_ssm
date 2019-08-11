@@ -7,6 +7,56 @@ import java.util.Date;
  * 订单管理实体类
  */
 public class Order {
+
+    /**
+     * 添加的附属类
+     */
+
+    private Product product;
+    private Custom custom;
+
+    @Override
+    public String toString()
+    {
+        final StringBuffer sb = new StringBuffer("Order{");
+        sb.append("product=").append(product);
+        sb.append(", custom=").append(custom);
+        sb.append(", orderId='").append(orderId).append('\'');
+        sb.append(", customId='").append(customId).append('\'');
+        sb.append(", productId='").append(productId).append('\'');
+        sb.append(", orderDate=").append(orderDate);
+        sb.append(", requestDate=").append(requestDate);
+        sb.append(", note='").append(note).append('\'');
+        sb.append(", quantity=").append(quantity);
+        sb.append(", unitPrice=").append(unitPrice);
+        sb.append(", unit='").append(unit).append('\'');
+        sb.append(", image='").append(image).append('\'');
+        sb.append(", file='").append(file).append('\'');
+        sb.append(", status=").append(status);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    public Product getProduct()
+    {
+        return product;
+    }
+
+    public void setProduct(Product product)
+    {
+        this.product = product;
+    }
+
+    public Custom getCustom()
+    {
+        return custom;
+    }
+
+    public void setCustom(Custom custom)
+    {
+        this.custom = custom;
+    }
+
     private String orderId;
 
     private String customId;
