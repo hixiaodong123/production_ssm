@@ -1,6 +1,8 @@
-package cn.lime.service;
+package cn.lime.service.planprogress;
 
 import cn.lime.entity.planprogress.Custom;
+
+import java.util.List;
 
 /**
  * @description: 客户业务层接口
@@ -14,4 +16,6 @@ public interface CustomService
     Custom findByCustomId(String customId);
 
     void update(Custom custom);
+
+    List<Custom> findAll();
 }

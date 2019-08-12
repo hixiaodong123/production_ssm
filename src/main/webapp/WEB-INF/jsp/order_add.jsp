@@ -14,7 +14,7 @@
 	        <tr>
 	            <td>订单编号:</td>
 	            <td>
-	            	<input class="easyui-textbox" type="text" name="orderId" data-options="required:true"></input>
+	            	<input class="easyui-textbox" type="text" name="orderId" data-options="required:true"/>
 	            </td>
 	        </tr>
 	        <tr>

@@ -1,12 +1,13 @@
 package cn.lime.controller.planprogress;
 
 import cn.lime.entity.planprogress.Custom;
-import cn.lime.service.CustomService;
+import cn.lime.service.planprogress.CustomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -133,5 +134,16 @@ public class CustomController
             return null;
         }
     }
+
+
+    //用于展示在order订单增加页面中的custom信息
+    @RequestMapping(value = "/get_data", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Custom> getData()
+    {
+        //List<Product> list = new ArrayList<>();
+        return customService.findAll();
+    }
+
 
 }

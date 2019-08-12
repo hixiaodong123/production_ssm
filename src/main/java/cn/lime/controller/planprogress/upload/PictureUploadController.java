@@ -1,9 +1,7 @@
 package cn.lime.controller.planprogress.upload;
 
-import cn.lime.service.planprogress.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,15 +25,6 @@ import java.util.UUID;
 public class PictureUploadController
 {
 
-    //注入业务层依赖
-    private final UploadService uploadService;
-
-    @Autowired
-    public PictureUploadController(UploadService uploadService)
-    {
-        this.uploadService = uploadService;
-    }
-
     //图片上传
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
@@ -45,7 +34,7 @@ public class PictureUploadController
 
         Map<String, Object> map = new HashMap<>();
         //获取文件上传的路径
-        String realPath = request.getSession().getServletContext().getRealPath("/upload/images/");
+        String realPath = request.getSession().getServletContext().getRealPath("/upload/images/product");
         //判断该路径是否存在
         File file = new File(realPath);
         if (!file.exists())
@@ -58,7 +47,7 @@ public class PictureUploadController
         //对文件名做唯一化处理
         String uuid = UUID.randomUUID().toString().replace("-", "_");
         filename = uuid + "_" + filename;
-        String url = request.getContextPath() + "/upload/images/" + filename;
+        String url = request.getContextPath() + "/upload/images/product/" + filename;
 
         //开始上传
         try
@@ -77,14 +66,15 @@ public class PictureUploadController
     }
 
     //删除添加界面图片的请求
+    //界面图片删除的同时也要删除本地图片
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, Object> delete(String picName, HttpServletRequest request)
     {
         Map<String, Object> map = new HashMap<>();
         // 文件路径
-        String path = request.getSession().getServletContext().getRealPath("/upload/images/");
-        String newFileName = picName.replaceAll("/production/upload/images/","");
+        String path = request.getSession().getServletContext().getRealPath("/upload/images/product/");
+        String newFileName = picName.replaceAll("/production/upload/images/product/","");
         File targetFile = new File(path, newFileName);
         if (targetFile.exists())
         {

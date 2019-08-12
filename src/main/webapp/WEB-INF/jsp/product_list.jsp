@@ -275,7 +275,11 @@ function doSearch_product(value,name){ //用户输入用户名,点击搜素,触�
                 				$.messager.alert('提示','删除产品成功!',undefined,function(){
                 					$("#productList").datagrid("reload");
                 				});
-                			}
+                			}else {
+								$.messager.alert('提示','删除失败异常!',undefined,function(){
+									$("#productList").datagrid("reload");
+								});
+							}
                 		});
             	    }
             	});

@@ -20,4 +20,10 @@ public interface OrderMapper
     int updateByPrimaryKey(Order record);
 
     List<Order> findAll();
+
+    @Select("select image from c_order where order_id = #{id}")
+    String findImageById(String id);
+
+    @Select("select file from c_order where order_id = #{id}")
+    String findFileById(String id);
 }

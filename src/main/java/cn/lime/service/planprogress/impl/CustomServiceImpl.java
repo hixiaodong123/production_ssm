@@ -2,9 +2,11 @@ package cn.lime.service.planprogress.impl;
 
 import cn.lime.entity.planprogress.Custom;
 import cn.lime.mapper.planprogress.CustomMapper;
-import cn.lime.service.CustomService;
+import cn.lime.service.planprogress.CustomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @description: 客户业务层实现类
@@ -34,5 +36,11 @@ public class CustomServiceImpl implements CustomService
     public void update(Custom custom)
     {
         customMapper.updateByPrimaryKeySelective(custom);
+    }
+
+    @Override
+    public List<Custom> findAll()
+    {
+        return customMapper.findAll();
     }
 }
