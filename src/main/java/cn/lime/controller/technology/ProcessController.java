@@ -1,8 +1,6 @@
 package cn.lime.controller.technology;
 
 import cn.lime.entity.technology.Process;
-import cn.lime.entity.technology.Technology;
-import cn.lime.entity.technology.TechnologyPlan;
 import cn.lime.service.technology.ProcessService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -122,5 +120,14 @@ public class ProcessController {
     public List<Process> selectProcessByTechnologyPlanIdLike(String searchValue){
         List<Process> processes = processService.selectProcessByTechnologyPlanIdLike("%" + searchValue + "%");
         return processes;
+    }
+
+    //获取表process中全部的信息
+    @RequestMapping("get_data")
+    @ResponseBody
+    public Process[] getData() {
+        List<Process> processList = processService.listProcesss();
+        Process[] processs =processList.toArray(new Process[0]);
+        return processs;
     }
 }

@@ -2,8 +2,9 @@ package cn.lime.mapper.tehnology;
 
 import cn.lime.entity.technology.Process;
 import cn.lime.entity.technology.ProcessExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ProcessMapper {
     long countByExample(ProcessExample example);
@@ -27,8 +28,4 @@ public interface ProcessMapper {
     int updateByPrimaryKeySelective(Process record);
 
     int updateByPrimaryKey(Process record);
-
-//    List<Process> selectProcessByProcessIdLike(@Param("searchValue") String searchValue);
-//
-//    List<Process> selectProcessByTechnologyPlanIdLike(@Param("searchValue") String searchValue);
 }

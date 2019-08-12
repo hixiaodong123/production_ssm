@@ -16,4 +16,6 @@ public interface ProcessService {
     List<Process> selectProcessByProcessIdLike(String searchValue);
 
     List<Process> selectProcessByTechnologyPlanIdLike(String searchValue);
+
+    List<Process> listProcesss();
 }

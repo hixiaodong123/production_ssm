@@ -25,28 +25,28 @@
 
 <div  id="toolbar_materialConsume" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
-		<c:if test="${per=='materialConsume:add' }" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
+		<%--<c:if test="${per=='materialConsume:add' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="materialConsume_add()">
 					新增
 				</a>
 		    </div>  
-		</c:if>
-		<c:if test="${per=='materialConsume:edit' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='materialConsume:edit' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="materialConsume_edit()">
 					编辑
 				</a>
 		    </div>  
-		</c:if>
-		<c:if test="${per=='materialConsume:delete' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='materialConsume:delete' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel"
 				   onclick="materialConsume_delete()">删除</a>
 		    </div>  
-		</c:if>
-	</c:forEach>
+		<%--</c:if>--%>
+	<%--</c:forEach>--%>
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -142,7 +142,7 @@
 <div id="materialConsumeWorkInfo" class="easyui-dialog" title="作业信息" data-options="modal:true,closed:true,
 		resizable:true,iconCls:'icon-save'" style="width:40%;height:55%;padding:10px;">
 <form id="materialConsumeWorkForm" class="workForm" method="post">
-		<input type="hidden" name="workId"/>
+		<input type="hidden" name="workId" value="${workId}"/>
 	    <table cellpadding="5">
 	    	<tr>
 	            <td>工序号:</td>

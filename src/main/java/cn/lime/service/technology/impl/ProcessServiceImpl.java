@@ -1,5 +1,6 @@
 package cn.lime.service.technology.impl;
 
+
 import cn.lime.entity.technology.Process;
 import cn.lime.entity.technology.ProcessExample;
 import cn.lime.mapper.tehnology.ProcessMapper;
@@ -59,5 +60,10 @@ public class ProcessServiceImpl implements ProcessService {
         List<Process> processes = processMapper.selectByExample(processExample);
 //        List<Process> processes = processMapper.selectProcessByTechnologyPlanIdLike(searchValue);
         return processes;
+    }
+
+    @Override
+    public List<Process> listProcesss() {
+        return processMapper.selectByExample(new ProcessExample());
     }
 }
