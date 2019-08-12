@@ -15,7 +15,7 @@
         }
 
         .divNorth {
-            background: url('${baseurl}/image/TitleBackground.jpg') no-repeat center center;
+            background: url('image/TitleBackground.jpg') no-repeat center center;
             background-size: 100% 100%;
         }
     </style>
@@ -159,7 +159,21 @@
         </ul>
     </div>
 
-    <c:if test="${activeUser.locked == '1' }">
+    <div title="系统管理" style="padding:10px;">
+
+        <ul id="sysManager" class="easyui-tree"
+            data-options="animate:true,lines:true">
+            <li><span>系统管理</span>
+                <ul>
+                    <li data-options="attributes:{'url':'user/find'}">用户管理</li>
+                </ul>
+                <ul>
+                    <li data-options="attributes:{'url':'role/find'}">角色管理</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <%--<c:if test="${activeUser.locked == '1' }">
         <div title="系统管理" style="padding:10px;">
 
             <ul id="sysManager" class="easyui-tree"
@@ -174,7 +188,7 @@
                 </li>
             </ul>
         </div>
-    </c:if>
+    </c:if>--%>
 </div>
 
 <!-- </div> -->
