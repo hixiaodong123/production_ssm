@@ -66,24 +66,25 @@
 	
 	function submitTechnologyPlanEditForm(){
 		$.get("technologyPlan/edit_judge",'',function(data){
-    		/* if(data.msg != null){
+    		 if(data.msg != null){
     			$.messager.alert('提示', data.msg);
-    		}else{ */
-    			if(!$('#technologyPlanEditForm').form('validate')){
-    				$.messager.alert('提示','表单还未填写完成!');
-    				return ;
-    			}
-    			
-    			$.post("technologyPlan/update_all",$("#technologyPlanEditForm").serialize(), function(data){
-    				if(data.status == 200){
-    					$.messager.alert('提示','修改工艺计划成功!','info',function(){
-    						$("#technologyPlanEditWindow").window('close');
-    						$("#technologyPlanList").datagrid("reload");
-    					});
-    				}else{
-    					$.messager.alert('提示',data.msg);
-    				}
-    			});
+    		}else {
+				 if (!$('#technologyPlanEditForm').form('validate')) {
+					 $.messager.alert('提示', '表单还未填写完成!');
+					 return;
+				 }
+
+				 $.post("technologyPlan/update_all", $("#technologyPlanEditForm").serialize(), function (data) {
+					 if (data.status == 200) {
+						 $.messager.alert('提示', '修改工艺计划成功!', 'info', function () {
+							 $("#technologyPlanEditWindow").window('close');
+							 $("#technologyPlanList").datagrid("reload");
+						 });
+					 } else {
+						 $.messager.alert('提示', data.msg);
+					 }
+				 });
+			 }
     	});
 	}
 </script>

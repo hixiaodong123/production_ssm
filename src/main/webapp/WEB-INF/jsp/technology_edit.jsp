@@ -63,9 +63,9 @@
 <script type="text/javascript">
 	function submitTechnologyEditForm(){
 		$.get("technology/edit_judge",'',function(data){
-    		/* if(data.msg != null){
+    		if(data.msg != null){
     			$.messager.alert('提示', data.msg);
-    		}else{ */
+    		}else{
     			if(!$('#technologyEditForm').form('validate')){
     				$.messager.alert('提示','表单还未填写完成!');
     				return ;
@@ -81,7 +81,7 @@
     					$.messager.alert('提示',data.msg);
     				}
     			});
-    		//}
+    		}
     	});
 	}
 </script>
