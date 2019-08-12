@@ -26,29 +26,29 @@
 
 <div  id="toolbar_fMeasureCheck" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
-		<c:if test="${per=='fMeasureCheck:add' }" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
+		<%--<c:if test="${per=='fMeasureCheck:add' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="fMeasureCheck_add()">
 					新增
 				</a>
 		    </div>  
-		</c:if>
-		<c:if test="${per=='fMeasureCheck:edit' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='fMeasureCheck:edit' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="fMeasureCheck_edit()">
 					编辑
 				</a>
 		    </div>  
-		</c:if>
-		<c:if test="${per=='fMeasureCheck:delete' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='fMeasureCheck:delete' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="fMeasureCheck_delete()">
 					删除
 				</a>
 		    </div>  
-		</c:if>
-	</c:forEach>
+		<%--</c:if>--%>
+	<%--</c:forEach>--%>
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -518,7 +518,7 @@ function getFMeasureSelectionsIds(){
     
 //////////////////////////////////////////////////////////////////////////
 function fMeasureCheck_add(){
-	$.get("fMeasureCheck/add_judge",'',function(data){
+	$.get("measure/add_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{
@@ -528,7 +528,7 @@ function fMeasureCheck_add(){
 }
 
 function fMeasureCheck_edit(){
-	$.get("fMeasureCheck/edit_judge",'',function(data){
+	$.get("measure/edit_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{
@@ -557,7 +557,7 @@ function fMeasureCheck_edit(){
 }
 
 function fMeasureCheck_delete(){
-	$.get("fMeasureCheck/delete_judge",'',function(data){
+	$.get("measure/delete_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{

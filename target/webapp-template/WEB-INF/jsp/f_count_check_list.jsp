@@ -28,27 +28,27 @@
 
 <div  id="toolbar_fCountCheck" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
-		<c:if test="${per=='fCountCheck:add' }" >
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
+		<%--<c:if test="${per=='fCountCheck:add' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="fCountCheck_add()">新增</a>  
 		    </div>  
-		</c:if>
-		<c:if test="${per=='fCountCheck:edit' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='fCountCheck:edit' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="fCountCheck_edit()">
 					编辑
 				</a>
 		    </div>  
-		</c:if>
-		<c:if test="${per=='fCountCheck:delete' }" >
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='fCountCheck:delete' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="fCountCheck_delete()">
 					删除
 				</a>
 		    </div>  
-		</c:if>
-	</c:forEach>
+		<%--</c:if>--%>
+	<%--</c:forEach>--%>
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -530,7 +530,7 @@ function doSearch_fCountCheck(value,name){ //用户输入用户名,点击搜素,
 //////////////////////////////////////////////////////////////////////////
 
 function fCountCheck_add(){
-	$.get("fCountCheck/add_judge",'',function(data){
+	$.get("f_count_check/add_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{
@@ -540,7 +540,7 @@ function fCountCheck_add(){
 }
 
 function fCountCheck_edit(){
-	$.get("fCountCheck/edit_judge",'',function(data){
+	$.get("f_count_check/edit_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{
@@ -569,7 +569,7 @@ function fCountCheck_edit(){
 }
 
 function fCountCheck_delete(){
-	$.get("fCountCheck/delete_judge",'',function(data){
+	$.get("f_count_check/delete_judge",'',function(data){
    		if(data.msg != null){
    			$.messager.alert('提示', data.msg);
    		}else{
