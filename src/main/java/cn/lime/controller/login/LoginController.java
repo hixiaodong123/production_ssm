@@ -107,6 +107,6 @@ public class LoginController
     {
         //销毁session
         session.removeAttribute("activeUser");
-        return "login";
+        return "redirect:login";
     }
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+<link rel="shortcut icon" href="image/favicon.ico"/>
 <link href="js/kindeditor-4.1.10/themes/default/default.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" charset="utf-8" src="js/kindeditor-4.1.10/kindeditor-all-min.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/kindeditor-4.1.10/lang/zh_CN.js"></script>
@@ -185,6 +186,8 @@ function doSearch_product(value,name){ //用户输入用户名,点击搜素,触�
     					$("#productNoteDialog").dialog("close");
     					$("#productList").datagrid("reload");
     					$.messager.alert("操作提示", "更新产品介绍成功！");
+    				}else if (data.status == 100) {
+    					$.messager.alert("操作提示", "不能提交空数据!！");
     				}else{
     					$.messager.alert("操作提示", "更新产品介绍失败！");
     				}
