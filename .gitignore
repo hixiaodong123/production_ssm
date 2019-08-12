@@ -1,3 +1,5 @@
 .idea/
 target/
 production_ssm.iml/
+generatorConfig.xml
+*.properties

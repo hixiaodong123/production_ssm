@@ -1,6 +1,5 @@
 package cn.lime.controller.planprogress;
 
-import cn.lime.entity.planprogress.Order;
 import cn.lime.entity.planprogress.Product;
 import cn.lime.entity.planprogress.QueryList;
 import cn.lime.service.planprogress.ProductService;
@@ -8,12 +7,10 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,6 +65,59 @@ public class ProductController
         queryList.setTotal(total);
         return queryList;
     }
+
+    //搜索查询并显示结果分页
+    //通过product_name
+    @RequestMapping(value = "/search_product_by_productName", method = RequestMethod.GET)
+    @ResponseBody
+    public QueryList<Product> searchByProductName(String searchValue, String page, String rows)
+    {
+        QueryList<Product> queryList = new QueryList<>();
+        //使用分页查询工具
+        PageHelper.startPage(Integer.parseInt(page), Integer.parseInt(rows));
+        searchValue = "%" + searchValue + "%";
+        List<Product> list = productService.searchByProductName(searchValue);
+        queryList.setRows(list);
+        PageInfo<Product> pageInfo = new PageInfo<>(list);
+        long total = pageInfo.getTotal();
+        queryList.setTotal(total);
+        return queryList;
+    }
+
+    //通过product_type
+    @RequestMapping(value = "/search_product_by_productType", method = RequestMethod.GET)
+    @ResponseBody
+    public QueryList<Product> searchByProductType(String searchValue, String page, String rows)
+    {
+        QueryList<Product> queryList = new QueryList<>();
+        //使用分页查询工具
+        PageHelper.startPage(Integer.parseInt(page), Integer.parseInt(rows));
+        searchValue = "%" + searchValue + "%";
+        List<Product> list = productService.searchByProductType(searchValue);
+        queryList.setRows(list);
+        PageInfo<Product> pageInfo = new PageInfo<>(list);
+        long total = pageInfo.getTotal();
+        queryList.setTotal(total);
+        return queryList;
+    }
+
+    //通过product_id
+    @RequestMapping(value = "/search_product_by_productId", method = RequestMethod.GET)
+    @ResponseBody
+    public QueryList<Product> searchByProductId(String searchValue, String page, String rows)
+    {
+        QueryList<Product> queryList = new QueryList<>();
+        //使用分页查询工具
+        PageHelper.startPage(Integer.parseInt(page), Integer.parseInt(rows));
+        searchValue = "%" + searchValue + "%";
+        List<Product> list = productService.searchByProductId(searchValue);
+        queryList.setRows(list);
+        PageInfo<Product> pageInfo = new PageInfo<>(list);
+        long total = pageInfo.getTotal();
+        queryList.setTotal(total);
+        return queryList;
+    }
+
 
     //产品的介绍修改表单的验证请求
     @RequestMapping(value = "/edit_judge", method = RequestMethod.GET)
@@ -158,23 +208,23 @@ public class ProductController
     }
 
     //更新产品提交请求
-    @RequestMapping(value = "update_all",method = RequestMethod.POST)
+    @RequestMapping(value = "update_all", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> updateAll(Product product)
+    public Map<String, Object> updateAll(Product product)
     {
-        Map<String,Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         try
         {
             productService.update(product);
-            map.put("status","200");
-            map.put("msg","OK");
-            map.put("data",null);
+            map.put("status", "200");
+            map.put("msg", "OK");
+            map.put("data", null);
             return map;
         }
         catch (Exception e)
         {
             e.printStackTrace();
-            map.put("msg","更新失败!");
+            map.put("msg", "更新失败!");
             return map;
         }
 
@@ -189,7 +239,26 @@ public class ProductController
     }
 
     //删除请求实现
-    //@RequestMapping(value = "/delete_batch",method = RequestMethod.POST)
+    @RequestMapping(value = "/delete_batch", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> deleteBatch(String[] ids, HttpServletRequest request)
+    {
+        Map<String, Object> map = new HashMap<>();
+        try
+        {
+            productService.deleteByArray(ids, request);
+            map.put("status", "200");
+            map.put("msg", "OK");
+            map.put("data", null);
+            return map;
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            map.put("data", "删除失败!");
+            return map;
+        }
+    }
 
 
     //显示单个产品的页面请求
@@ -198,6 +267,15 @@ public class ProductController
     public Product getProduct(@PathVariable("productId") String productId)
     {
         return productService.findByProductId(productId);
+    }
+
+    //用于展示在order订单增加页面中的product信息
+    @RequestMapping(value = "/get_data", method = RequestMethod.POST)
+    @ResponseBody
+    public List<Product> getData()
+    {
+        //List<Product> list = new ArrayList<>();
+        return productService.findAll();
     }
 
 

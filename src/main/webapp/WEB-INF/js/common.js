@@ -428,7 +428,7 @@ function initOrderAddFileUpload() {
                 data: {fileName: data.url},
                 success: function (data) {
                     if (data.data == "success") {
-                        pd.statusbar.hide();        //删除成功后隐藏进度条等
+                        pd.statusbar.hide();        //删除成i功后隐藏进度条等
                         $('#image').val('');
                         var urls = $('#orderAddForm [name=file]').val().split(",");  //将删除的文件url从urls中移除
                         var deletedUrls = [];

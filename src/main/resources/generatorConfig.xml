@@ -13,7 +13,7 @@
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/production_ssm"
                         userId="root"
-                        password="1234">
+                        password="123156">
             <!--是否去除同名表-->
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
@@ -86,172 +86,21 @@
                    selectByExampleQueryId="false" ></table>-->
 
                <!-- 指定数据库表，要生成哪些表，就写哪些表，要和数据库中对应，不能写错！ -->
-<!--
-               <table  tableName="custom"
-                       enableCountByExample="false"
-                       enableUpdateByExample="false"
-                       enableDeleteByExample="false"
-                       enableSelectByExample="false"
-                       enableInsert="true"
-                       enableDeleteByPrimaryKey="true"
-                       enableSelectByPrimaryKey="true"
-                       selectByExampleQueryId="false"
-                       domainObjectName="Custom"
-               > </table>
-        <table tableName="c_order" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Order"/>
-        <table tableName="product" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Product"/>
-        <table tableName="work" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Work"/>
-        <table tableName="manufacture" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Manufacture"/>
-        <table tableName="task" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Task"/>
-        <table tableName="device" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Device"/>
-        <table tableName="device_type" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="DeviceType"/>
-        <table tableName="device_fault" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="DeviceFault"/>
-        <table tableName="device_check" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="DeviceCheck"/>
-        <table tableName="device_maintain" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="DeviceMaintain"/>
-        <table tableName="technology" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Technology"/>
-        <table tableName="technology_requirement" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="TechnologyRequirement"/>
-        <table tableName="technology_plan" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="TechnologyPlan"/>
-        <table tableName="process" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Process"/>
-        <table tableName="sys_user" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="SystemUser"/>
-        <table tableName="material" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="Material"/>
-        <table tableName="material_receive" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="MaterialReceive"/>
-        <table tableName="material_consume" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="MaterialConsume"/>
--->
-
-        <table tableName="sys_user" enableCountByExample="false"
-               enableUpdateByExample="false"
-               enableDeleteByExample="false"
-               enableSelectByExample="false"
-               enableInsert="true"
-               enableDeleteByPrimaryKey="true"
-               enableSelectByPrimaryKey="true"
-               selectByExampleQueryId="false" domainObjectName="SystemUser"/>
+               <!--<table  tableName="technology"-->
+                       <!--enableCountByExample="false"-->
+                       <!--enableUpdateByExample="false"-->
+                       <!--enableDeleteByExample="false"-->
+                       <!--enableSelectByExample="false"-->
+                       <!--enableInsert="true"-->
+                       <!--enableDeleteByPrimaryKey="true"-->
+                       <!--enableSelectByPrimaryKey="true"-->
+                       <!--selectByExampleQueryId="false"-->
+                       <!--domainObjectName="Technology"-->
+               <!--&gt; </table>-->
+        <table tableName="technology" domainObjectName="Technology"/>
+        <table tableName="technology_plan" domainObjectName="TechnologyPlan"/>
+        <table tableName="technology_requirement" domainObjectName="TechnologyRequirement"/>
+        <table tableName="process" domainObjectName="Process"/>
 
 
         <!--      <table schema="" tableName="orders"></table>

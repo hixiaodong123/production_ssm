@@ -7,6 +7,8 @@ import org.springframework.beans.PropertyMatches;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.List;
 
 /**
@@ -50,4 +52,47 @@ public class ProductServiceImpl implements ProductService
     {
         productMapper.insert(product);
     }
+
+    @Override
+    public void deleteByArray(String[] ids, HttpServletRequest request)
+    {
+        for (String id : ids)
+        {
+            //遍历删除本地图片
+            String str = productMapper.findImage(id);
+            String[] images = str.split(",");
+            String path = request.getSession().getServletContext().getRealPath("/upload/images/product/");
+            for (String image : images)
+            {
+                String newFileName = image.replaceAll("/production/upload/images/product", "");
+                File targetFile = new File(path, newFileName);
+                if (targetFile.exists())
+                {
+                    targetFile.delete();
+                }
+            }
+            //删除数据库数据
+            productMapper.deleteByPrimaryKey(id);
+        }
+    }
+
+    @Override
+    public List<Product> searchByProductName(String searchValue)
+    {
+
+        return productMapper.searchByProductName(searchValue);
+    }
+
+    @Override
+    public List<Product> searchByProductType(String searchValue)
+    {
+        return productMapper.searchByProductType(searchValue);
+    }
+
+    @Override
+    public List<Product> searchByProductId(String searchValue)
+    {
+        return productMapper.searchByProductId(searchValue);
+    }
+
 }

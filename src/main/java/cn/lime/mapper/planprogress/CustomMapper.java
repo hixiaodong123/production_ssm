@@ -1,6 +1,9 @@
 package cn.lime.mapper.planprogress;
 
 import cn.lime.entity.planprogress.Custom;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 public interface CustomMapper {
     int deleteByPrimaryKey(String customId);
@@ -14,4 +17,7 @@ public interface CustomMapper {
     int updateByPrimaryKeySelective(Custom record);
 
     int updateByPrimaryKey(Custom record);
+
+    @Select("select * from custom")
+    List<Custom> findAll();
 }

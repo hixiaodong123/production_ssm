@@ -8,7 +8,7 @@
 <script type="text/javascript" charset="utf-8" src="js/kindeditor-4.1.10/lang/zh_CN.js"></script>
 
 <div style="padding:10px 10px 10px 10px">
-	<form id="productAddForm" class="productForm" method="post" enctype="multipart/form-data">
+	<form id="productAddForm" class="productForm" method="post">
 	    <table cellpadding="5" >
 	        <tr>
 	            <td>产品编号:</td>

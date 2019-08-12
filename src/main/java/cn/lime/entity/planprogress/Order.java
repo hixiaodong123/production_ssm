@@ -1,12 +1,16 @@
 package cn.lime.entity.planprogress;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
  * 订单管理实体类
  */
-public class Order {
+public class Order
+{
 
     /**
      * 添加的附属类
@@ -63,8 +67,12 @@ public class Order {
 
     private String productId;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date orderDate;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date requestDate;
 
     private String note;
@@ -81,99 +89,123 @@ public class Order {
 
     private Integer status;
 
-    public String getOrderId() {
+    public String getOrderId()
+    {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(String orderId)
+    {
         this.orderId = orderId == null ? null : orderId.trim();
     }
 
-    public String getCustomId() {
+    public String getCustomId()
+    {
         return customId;
     }
 
-    public void setCustomId(String customId) {
+    public void setCustomId(String customId)
+    {
         this.customId = customId == null ? null : customId.trim();
     }
 
-    public String getProductId() {
+    public String getProductId()
+    {
         return productId;
     }
 
-    public void setProductId(String productId) {
+    public void setProductId(String productId)
+    {
         this.productId = productId == null ? null : productId.trim();
     }
 
-    public Date getOrderDate() {
+    public Date getOrderDate()
+    {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(Date orderDate)
+    {
         this.orderDate = orderDate;
     }
 
-    public Date getRequestDate() {
+    public Date getRequestDate()
+    {
         return requestDate;
     }
 
-    public void setRequestDate(Date requestDate) {
+    public void setRequestDate(Date requestDate)
+    {
         this.requestDate = requestDate;
     }
 
-    public String getNote() {
+    public String getNote()
+    {
         return note;
     }
 
-    public void setNote(String note) {
+    public void setNote(String note)
+    {
         this.note = note == null ? null : note.trim();
     }
 
-    public Integer getQuantity() {
+    public Integer getQuantity()
+    {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(Integer quantity)
+    {
         this.quantity = quantity;
     }
 
-    public BigDecimal getUnitPrice() {
+    public BigDecimal getUnitPrice()
+    {
         return unitPrice;
     }
 
-    public void setUnitPrice(BigDecimal unitPrice) {
+    public void setUnitPrice(BigDecimal unitPrice)
+    {
         this.unitPrice = unitPrice;
     }
 
-    public String getUnit() {
+    public String getUnit()
+    {
         return unit;
     }
 
-    public void setUnit(String unit) {
+    public void setUnit(String unit)
+    {
         this.unit = unit == null ? null : unit.trim();
     }
 
-    public String getImage() {
+    public String getImage()
+    {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(String image)
+    {
         this.image = image == null ? null : image.trim();
     }
 
-    public String getFile() {
+    public String getFile()
+    {
         return file;
     }
 
-    public void setFile(String file) {
+    public void setFile(String file)
+    {
         this.file = file == null ? null : file.trim();
     }
 
-    public Integer getStatus() {
+    public Integer getStatus()
+    {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Integer status)
+    {
         this.status = status;
     }
 }

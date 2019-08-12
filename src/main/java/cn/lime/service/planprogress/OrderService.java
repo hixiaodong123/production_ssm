@@ -2,6 +2,7 @@ package cn.lime.service.planprogress;
 
 import cn.lime.entity.planprogress.Order;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -13,4 +14,11 @@ import java.util.List;
 public interface OrderService
 {
     List<Order> findAll();
+
+    void update(Order note);
+
+    void insert(Order order);
+
+    void deleteByArray(String[] ids, HttpServletRequest request);
+
 }
