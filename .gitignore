@@ -2,4 +2,4 @@
 target/
 production_ssm.iml/
 generatorConfig.xml
-*.properties
+src\main\resources\*.properties
