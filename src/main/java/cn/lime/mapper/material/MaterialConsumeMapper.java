@@ -3,6 +3,9 @@ package cn.lime.mapper.material;
 import cn.lime.entity.material.MaterialConsume;
 import cn.lime.entity.material.MaterialConsumeExample;
 import java.util.List;
+
+import cn.lime.entity.material.MaterialConsumes;
+import cn.lime.entity.material.MaterialReceives;
 import org.apache.ibatis.annotations.Param;
 
 public interface MaterialConsumeMapper {
@@ -17,6 +20,9 @@ public interface MaterialConsumeMapper {
     int insertSelective(MaterialConsume record);
 
     List<MaterialConsume> selectByExample(MaterialConsumeExample example);
+
+    MaterialConsumes queryMaterialConsumesByConsumeId(String consumeId);
+
 
     MaterialConsume selectByPrimaryKey(String consumeId);
 

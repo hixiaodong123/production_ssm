@@ -9,6 +9,7 @@
     r.receive_id receive_id,
     r.amount amount,
     r.receive_date receive_date,
+    r.sender sender,
     r.receiver receiver,
     r.note note,
     m.material_id material_id,
@@ -22,8 +23,8 @@
   </select>
   <resultMap id="ReceivesMapLeft" type="cn.lime.entity.material.MaterialReceives">
     <result column="receive_id"  property="receiveId" />
-    <result column="amount" jdbcType="INTEGER" property="amount" />
-    <result column="receive_date" jdbcType="TIMESTAMP" property="receiveDate" />
+    <result column="amount" property="amount" />
+    <result column="receive_date" property="receiveDate" />
     <result column="sender"  property="sender" />
     <result column="receiver"  property="receiver" />
     <result column="note"  property="note" />

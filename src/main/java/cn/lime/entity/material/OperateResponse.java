@@ -1,6 +1,6 @@
 package cn.lime.entity.material;
 
-public class MaterialResponse {
+public class OperateResponse {
 
     private Material data;
     private String msg;

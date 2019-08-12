@@ -19,8 +19,8 @@ public interface MaterialReceiveService {
 
     MaterialReceive listMaterialReceivesById(String materialReceiveId);
 
-//    List<MaterialReceives> listMaterialReceivesByLikeId(String materialReceiveId);
-//
-//    List<MaterialReceives> listMaterialReceivesByLikeType(String materialReceiveId);
+    List<MaterialReceives> listMaterialReceivesByLikeId(String materialReceiveId);
+
+    List<MaterialReceives> listMaterialReceivesByLikeMaterialId(String materialReceiveId);
 
 }

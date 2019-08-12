@@ -1,5 +1,8 @@
 package cn.lime.entity.material;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class MaterialConsume {
@@ -11,6 +14,8 @@ public class MaterialConsume {
 
     private Integer consumeAmount;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date consumeDate;
 
     private String sender;

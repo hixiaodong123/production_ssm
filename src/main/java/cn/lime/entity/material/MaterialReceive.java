@@ -1,5 +1,8 @@
 package cn.lime.entity.material;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class MaterialReceive {
@@ -7,8 +10,10 @@ public class MaterialReceive {
 
     private String materialId;
 
-    private Integer amount;
+    private int amount;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date receiveDate;
 
     private String sender;
@@ -33,11 +38,11 @@ public class MaterialReceive {
         this.materialId = materialId == null ? null : materialId.trim();
     }
 
-    public Integer getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 

@@ -3,8 +3,9 @@ package cn.lime.controller.material;
 import cn.lime.entity.material.MaterialReceive;
 import cn.lime.entity.material.MaterialReceiveJson;
 import cn.lime.entity.material.MaterialReceives;
-import cn.lime.entity.material.MaterialResponse;
+import cn.lime.entity.material.OperateResponse;
 import cn.lime.service.material.MaterialReceiveService;
+import cn.lime.service.material.MaterialService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class MaterialReceiveController {
     @Autowired
     MaterialReceiveService materialReceiveService;
 
+    @Autowired
+    MaterialService materialService;
+
     @RequestMapping("find")
     public String findPage() {
         return "materialReceive_list";
@@ -35,21 +39,21 @@ public class MaterialReceiveController {
         return returnInfo(materialReceives);
     }
 
-//    @RequestMapping("search_materialReceive_by_ReceiveId")
-//    @ResponseBody
-//    public MaterialReceiveJson listMaterialReceivesById(int page, int rows, String searchValue) {
-//        PageHelper.startPage(page, rows);
-//        List<MaterialReceives> materialReceives = materialReceiveService.listMaterialReceivesByLikeId(searchValue);
-//        return returnInfo(materialReceives);
-//    }
-//
-//    @RequestMapping("search_materialReceive_by_materialId")
-//    @ResponseBody
-//    public MaterialReceiveJson listMaterialReceivesByType(int page, int rows, String searchValue) {
-//        PageHelper.startPage(page, rows);
-//        List<MaterialReceives> materialReceives = materialReceiveService.listMaterialReceivesByLikeType(searchValue);
-//        return returnInfo(materialReceives);
-//    }
+    @RequestMapping("search_materialReceive_by_receiveId")
+    @ResponseBody
+    public MaterialReceiveJson listMaterialReceivesById(int page, int rows, String searchValue) {
+        PageHelper.startPage(page, rows);
+        List<MaterialReceives> materialReceives = materialReceiveService.listMaterialReceivesByLikeId(searchValue);
+        return returnInfo(materialReceives);
+    }
+
+    @RequestMapping("search_materialReceive_by_materialId")
+    @ResponseBody
+    public MaterialReceiveJson listMaterialReceivesByMaterialId(int page, int rows, String searchValue) {
+        PageHelper.startPage(page, rows);
+        List<MaterialReceives> materialReceives = materialReceiveService.listMaterialReceivesByLikeMaterialId(searchValue);
+        return returnInfo(materialReceives);
+    }
 
     private MaterialReceiveJson returnInfo(List<MaterialReceives> materialReceives) {
         PageInfo<MaterialReceives> pageInfo = new PageInfo<>(materialReceives);
@@ -69,8 +73,10 @@ public class MaterialReceiveController {
 
     @RequestMapping("add")
     public String add() {
-        return "materialReceive_list";
+        return "materialReceive_add";
     }
+
+
 
     @RequestMapping("edit")
     public String edit() {
@@ -80,73 +86,88 @@ public class MaterialReceiveController {
     //新增物料信息
     @RequestMapping("insert")
     @ResponseBody
-    public MaterialResponse insert(MaterialReceive materialReceive) {
-        MaterialResponse materialResponse = new MaterialResponse();
-        if ("".equals(materialReceive.getReceiveId()) || null == materialReceive.getReceiveId()) {
-            materialResponse.setStatus(403);
-            materialResponse.setMsg("新增失败，物料编号不能为空");
-            return materialResponse;
+    public OperateResponse insert(MaterialReceive materialReceive) {
+        OperateResponse operateResponse = new OperateResponse();
+        if (materialReceive == null) {
+            operateResponse.setStatus(400);
+            operateResponse.setMsg("新增失败，请稍后重试");
+            operateResponse.setData(null);
+            return operateResponse;
         }
-        MaterialReceive findMaterialReceive = materialReceiveService.listMaterialReceivesById(materialReceive.getReceiveId());
+        if ("".equals(materialReceive.getReceiveId()) || null == materialReceive.getReceiveId() ||
+                "".equals(materialReceive.getMaterialId()) || materialReceive.getMaterialId() == null) {
+            operateResponse.setStatus(403);
+            operateResponse.setMsg("新增失败，物料编号不能为空");
+            return operateResponse;
+        }
+        String receiveId = materialReceive.getReceiveId();
+        MaterialReceive findMaterialReceive = materialReceiveService.listMaterialReceivesById(receiveId);
         if (null == findMaterialReceive) {
+            if (materialReceive.getAmount() < 0) {
+                operateResponse.setStatus(403);
+                operateResponse.setMsg("新增失败，收入数量不能小于零");
+                return operateResponse;
+            }
             materialReceiveService.insertMaterialReceive(materialReceive);
-            materialResponse.setStatus(200);
-            materialResponse.setMsg("OK");
-            materialResponse.setData(null);
+            operateResponse.setStatus(200);
+            operateResponse.setMsg("OK");
+            operateResponse.setData(null);
         } else {
-            materialResponse.setMsg("新增失败，请稍后重试");
+            operateResponse.setStatus(400);
+            operateResponse.setMsg("新增失败，请稍后重试");
+            operateResponse.setData(null);
         }
-        return materialResponse;
+        return operateResponse;
     }
 
     //更新物料信息
     @RequestMapping("update_all")
     @ResponseBody
-    public MaterialResponse UpdateAll(MaterialReceive materialReceive) {
+    public OperateResponse UpdateAll(MaterialReceive materialReceive) {
         boolean b = materialReceiveService.updateMaterialReceive(materialReceive);
-        MaterialResponse materialResponse = new MaterialResponse();
+        OperateResponse operateResponse = new OperateResponse();
         if (b) {
-            materialResponse.setStatus(200);
-            materialResponse.setMsg("OK");
-            materialResponse.setData(null);
+            operateResponse.setStatus(200);
+            operateResponse.setMsg("OK");
+            operateResponse.setData(null);
         } else {
-            materialResponse.setMsg("修改失败，请稍后重试");
+            operateResponse.setMsg("修改失败，请稍后重试");
         }
-        return materialResponse;
+        return operateResponse;
     }
 
     //更新物料备注信息
     @RequestMapping("update_note")
     @ResponseBody
-    public MaterialResponse updateNote(MaterialReceive materialReceive) {
+    public OperateResponse updateNote(MaterialReceive materialReceive) {
         MaterialReceive findMaterialReceive = materialReceiveService.listMaterialReceivesById(materialReceive.getReceiveId());
-        MaterialResponse materialResponse = new MaterialResponse();
+        OperateResponse operateResponse = new OperateResponse();
         if (null != findMaterialReceive) {
             findMaterialReceive.setNote(materialReceive.getNote());
             materialReceiveService.updateMaterialReceive(findMaterialReceive);
-            materialResponse.setStatus(200);
-            materialResponse.setMsg("OK");
-            materialResponse.setData(null);
+            operateResponse.setStatus(200);
+            operateResponse.setMsg("OK");
+            operateResponse.setData(null);
         } else {
-            materialResponse.setMsg("修改失败，请稍后重试");
+            operateResponse.setMsg("修改失败，请稍后重试");
         }
-        return materialResponse;
+        return operateResponse;
     }
 
     //删除物料信息
     @RequestMapping("delete_batch")
     @ResponseBody
-    public MaterialResponse deleteBatch(String[] ids) {
+    public OperateResponse deleteBatch(String[] ids) {
         boolean b = materialReceiveService.deleteMaterialReceiveByIds(ids);
-        MaterialResponse materialResponse = new MaterialResponse();
+        OperateResponse operateResponse = new OperateResponse();
         if (b) {
-            materialResponse.setStatus(200);
-            materialResponse.setMsg("OK");
-            materialResponse.setData(null);
+            operateResponse.setStatus(200);
+            operateResponse.setMsg("OK");
+            operateResponse.setData(null);
         } else {
-            materialResponse.setMsg("删除失败，请稍后重试");
+            operateResponse.setMsg("删除失败，请稍后重试");
         }
-        return materialResponse;
+        return operateResponse;
     }
 
 }

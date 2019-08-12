@@ -1,14 +1,18 @@
 package cn.lime.entity.material;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class MaterialReceives {
-    private String receiveId;
 
-    private Material material;
+    private String receiveId;
 
     private Integer amount;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date receiveDate;
 
     private String sender;
@@ -16,6 +20,8 @@ public class MaterialReceives {
     private String receiver;
 
     private String note;
+
+    private Material material;
 
     public String getReceiveId() {
         return receiveId;

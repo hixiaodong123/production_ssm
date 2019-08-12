@@ -16,7 +16,7 @@ public interface MaterialService {
 
     List<Material> listMaterials();
 
-    Material listMaterialsById(String materialId);
+    Material listMaterialById(String materialId);
 
     List<Material> listMaterialsByLikeId(String materialId);
 

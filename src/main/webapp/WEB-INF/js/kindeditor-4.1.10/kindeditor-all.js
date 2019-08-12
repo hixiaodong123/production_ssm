@@ -8573,7 +8573,7 @@ SWFUpload.prototype.getSetting = function (name) {
 
 
 // Private: callFlash handles function calls made to the Flash element.
-// Calls are made with a setTimeout for some functions to work around
+// Calls are made with a setTimeout for some functions to others around
 // bugs in the ExternalInterface library.
 SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 	argumentArray = argumentArray || [];
@@ -8603,18 +8603,18 @@ SWFUpload.prototype.callFlash = function (functionName, argumentArray) {
 	to operate SWFUpload
    ***************************** */
 
-// WARNING: this function does not work in Flash Player 10
+// WARNING: this function does not others in Flash Player 10
 // Public: selectFile causes a File Selection Dialog window to appear.  This
 // dialog only allows 1 file to be selected.
 SWFUpload.prototype.selectFile = function () {
 	this.callFlash("SelectFile");
 };
 
-// WARNING: this function does not work in Flash Player 10
+// WARNING: this function does not others in Flash Player 10
 // Public: selectFiles causes a File Selection Dialog window to appear/ This
 // dialog allows the user to select any number of files
 // Flash Bug Warning: Flash limits the number of selectable files based on the combined length of the file names.
-// If the selection name length is too long the dialog will fail in an unpredictable manner.  There is no work-around
+// If the selection name length is too long the dialog will fail in an unpredictable manner.  There is no others-around
 // for this bug.
 SWFUpload.prototype.selectFiles = function () {
 	this.callFlash("SelectFiles");
@@ -8884,7 +8884,7 @@ SWFUpload.prototype.executeNextEvent = function () {
 };
 
 // Private: unescapeFileParams is part of a workaround for a flash bug where objects passed through ExternalInterface cannot have
-// properties that contain characters that are not valid for JavaScript identifiers. To work around this
+// properties that contain characters that are not valid for JavaScript identifiers. To others around this
 // the Flash Component escapes the parameter names and we must unescape again before passing them along.
 SWFUpload.prototype.unescapeFilePostParams = function (file) {
 	var reg = /[$]([0-9a-f]{4})/i;

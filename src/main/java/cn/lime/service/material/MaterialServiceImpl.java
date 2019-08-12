@@ -51,7 +51,7 @@ public class MaterialServiceImpl implements MaterialService {
     }
 
     @Override
-    public Material listMaterialsById(String materialId) {
+    public Material listMaterialById(String materialId) {
         return materialMapper.selectByPrimaryKey(materialId);
     }
 

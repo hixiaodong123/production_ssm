@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.lime.mapper.material.MaterialConsumeMapper">
+  <select id="queryMaterialConsumesByConsumeId" resultMap="ReceivesMapLeft">
+    select
+    r.consume_amount,
+    r.consume_date,
+    r.consume_id,
+    r.note,
+    r.receiver,
+    r.sender,
+    m.material_id,
+    m.material_type,
+    m.status,
+    m.remaining,
+    m.note note2,
+    w.work_id,
+    w.device_id,
+    w.process_id,
+    w.process_number,
+    w.product_id,
+    w.rating
+    from material_consume r
+    left join material m on r.material_id = m.material_id
+    left join work w on r.work_id = w.work_id
+    where r.consume_id = #{consumeId}
+  </select>
+  <resultMap id="ReceivesMapLeft" type="cn.lime.entity.material.MaterialConsumes">
+    <result column="consume_id" jdbcType="VARCHAR" property="consumeId" />
+    <result column="consume_amount" jdbcType="INTEGER" property="consumeAmount"/>
+    <result column="consume_date" jdbcType="TIMESTAMP" property="consumeDate" />
+    <result column="sender" jdbcType="VARCHAR" property="sender" />
+    <result column="receiver" jdbcType="VARCHAR" property="receiver" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <association property="material" javaType="cn.lime.entity.material.Material">
+      <result column="material_id"  property="materialId" />
+      <result column="material_type"  property="materialType" />
+      <result column="status"  property="status" />
+      <result column="remaining"  property="remaining" />
+      <result column="note2"  property="note" />
+    </association>
+    <association property="work" javaType="cn.lime.entity.plan.Work">
+        <result column="work_id" jdbcType="VARCHAR" property="workId" />
+        <result column="process_number" jdbcType="VARCHAR" property="processNumber" />
+        <result column="product_id" jdbcType="VARCHAR" property="productId" />
+        <result column="process_id" jdbcType="VARCHAR" property="processId" />
+        <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+        <result column="rating" jdbcType="INTEGER" property="rating" />
+    </association>
+  </resultMap>
   <resultMap id="BaseResultMap" type="cn.lime.entity.material.MaterialConsume">
     <id column="consume_id" jdbcType="VARCHAR" property="consumeId" />
     <result column="work_id" jdbcType="VARCHAR" property="workId" />
