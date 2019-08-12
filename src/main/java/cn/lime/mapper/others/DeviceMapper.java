@@ -1,4 +1,4 @@
-package cn.lime.mapper.ohters;
+package cn.lime.mapper.others;
 
 import cn.lime.entity.others.Device;
 import cn.lime.entity.others.DeviceExample;
