@@ -9,7 +9,7 @@
 
     <properties>
         <!--固定spring的版本号-->
-        <spring.version>5.1.8.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <mybatis.version>3.5.1</mybatis.version>
     </properties>
 
